@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="home.html" class="logo">Quiz.</a>
+            <nav class="navbar">
+                <a href="home.html" class="active">Home</a>
+                <a href="login.html">Login</a>     
+            </nav>
+        </div> 
+    </header>
+    <div class="container">
+        <h2>Signup</h2>
+
+        <form action="/signup" method="POST">
+            <div class="input-group">
+                <input type="text" id="username" name="username" placeholder="Username" required>
+            </div>
+
+            <div class="input-group">
+                <input type="email" id="email" name="email" placeholder="Email" required>
+            </div>
+
+            <div class="input-group">
+                <input type="password" id="password" name="password" placeholder="Password" required>
+            </div>
+
+            <div class="input-group">
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+            </div>
+
+            <span id="passwordError" style="color: red;"></span>
+
+            <button type="submit" id="submit">Signup</button>
+        </form>
+    </div>
+
+    <script src="signup.js"></script>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const error = urlParams.get('error');
+
+        if (error === 'emailExists') {
+            alert('This email address is already registered.');
+        } else if (error === 'passwordsDoNotMatch') {
+            alert('Passwords do not match.');
+        }
+    </script>
+</body>
+</html>

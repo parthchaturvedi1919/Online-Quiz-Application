@@ -1,0 +1,297 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+
+* {
+    font-family: "Ubuntu", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --green: #50C878;
+    --light-green: #66bb6a;
+    --white: #fff;
+    --gray: #f5f5f5;
+    --black1: #222;
+    --black2: #999;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    --transition-time: 0.4s;
+}
+
+.main {
+    margin-left: 250px;
+    padding: 20px;
+    transition: margin-left var(--transition-time) ease;
+}
+
+.main.active {
+    margin-left: 80px;
+}
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background: var(--white);
+    border-bottom: 2px solid var(--gray);
+    box-shadow: 0 2px 10px var(--shadow-color);
+}
+
+.topbar .toggle {
+    font-size: 30px;
+    cursor: pointer;
+    transition: transform var(--transition-time);
+}
+
+.topbar .toggle:hover {
+    transform: rotate(90deg);
+}
+
+.topbar .search label {
+    position: relative;
+}
+
+.topbar .search label input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid var(--gray);
+    border-radius: 30px;
+    outline: none;
+    transition: border-color var(--transition-time);
+}
+
+.topbar .search label input:focus {
+    border-color: var(--green);
+}
+
+.topbar .search label ion-icon {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: var(--gray);
+}
+
+.topbar .user img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform var(--transition-time);
+}
+
+.topbar .user img:hover {
+    transform: scale(1.1);
+}
+
+body {
+    background-image: url('background.jpg');
+    background-size: cover;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+}
+
+#userTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px var(--shadow-color);
+}
+
+#userTable th,
+#userTable td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--gray);
+}
+
+#userTable th {
+    background: var(--green);
+    color: var(--white);
+    font-weight: 600;
+}
+
+#userTable tbody tr {
+    transition: background var(--transition-time);
+}
+
+#userTable tbody tr:hover {
+    background: var(--light-green);
+    cursor: pointer;
+}
+
+#userTable td img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--white);
+}
+
+#quizResultsSection {
+    margin-top: 40px;
+}
+
+#quizResultsTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px var(--shadow-color);
+}
+
+#quizResultsTable th,
+#quizResultsTable td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--gray);
+}
+
+#quizResultsTable th {
+    background: var(--green);
+    color: var(--white);
+    font-weight: 600;
+}
+
+#quizResultsTable tbody tr {
+    transition: background var(--transition-time);
+}
+
+#quizResultsTable tbody tr:hover {
+    background: var(--light-green);
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: var(--black1);
+}
+
+h2 {
+    font-size: 24px;
+}
+
+@media (max-width: 768px) {
+    .navigation {
+        width: 200px;
+    }
+
+    .main {
+        margin-left: 200px;
+    }
+
+    .topbar .toggle ion-icon {
+        font-size: 24px;
+    }
+
+    #userTable th,
+    #userTable td {
+        padding: 10px;
+    }
+}
+
+.navigation {
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    background: var(--green);
+    border-left: 10px solid var(--green);
+    transition: width var(--transition-time) ease, transform var(--transition-time) ease;
+    overflow: hidden;
+    box-shadow: 2px 0 10px var(--shadow-color);
+    z-index: 2;
+}
+
+.navigation.active {
+    width: 80px;
+}
+
+.navigation ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0;
+}
+
+.navigation ul li {
+    position: relative;
+    width: 100%;
+    list-style: none;
+    border-radius: 30px;
+    margin-bottom: 15px;
+    transition: background-color var(--transition-time) ease, box-shadow var(--transition-time) ease;
+}
+
+.navigation ul li:hover,
+.navigation ul li.hovered {
+    background-color: var(--white);
+    box-shadow: 0 4px 20px var(--shadow-color);
+}
+
+.navigation ul li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--white);
+    padding: 15px;
+    transition: color var(--transition-time) ease;
+}
+
+.navigation ul li:hover a,
+.navigation ul li.hovered a {
+    color: var(--green);
+}
+
+.navigation ul li a .icon {
+    font-size: 20px;
+    margin-right: 20px;
+    transition: margin-right var(--transition-time) ease, transform var(--transition-time) ease;
+}
+
+.navigation.active ul li a .icon {
+    margin-right: 0;
+    transform: scale(0.7);
+}
+
+.navigation ul li a .title {
+    font-size: 18px;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: opacity var(--transition-time) ease, transform var(--transition-time) ease;
+}
+
+.navigation.active ul li a .title {
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+@media (max-width: 768px) {
+    .navigation {
+        width: 200px;
+    }
+
+    .main {
+        margin-left: 200px;
+    }
+
+    .topbar .toggle ion-icon {
+        font-size: 24px;
+    }
+
+    table th,
+    table td {
+        padding: 10px;
+    }
+}

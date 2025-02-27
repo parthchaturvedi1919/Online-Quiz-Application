@@ -1,0 +1,82 @@
+[
+  {
+    "question": "What is the correct way to declare a variable in Java?",
+    "opt1": "int number;",
+    "opt2": "number int;",
+    "opt3": "int:number;",
+    "opt4": "int = number;",
+    "correct": "opt1"
+  },
+  {
+    "question": "Which of the following is a valid constructor in Java?",
+    "opt1": "public MyClass() {}",
+    "opt2": "void MyClass() {}",
+    "opt3": "MyClass() {}",
+    "opt4": "MyClass() : super() {}",
+    "correct": "opt1"
+  },
+  {
+    "question": "What keyword is used to inherit a class in Java?",
+    "opt1": "inherits",
+    "opt2": "extends",
+    "opt3": "implements",
+    "opt4": "includes",
+    "correct": "opt2"
+  },
+  {
+    "question": "Which of the following is a wrapper class for primitive data type int?",
+    "opt1": "Integer",
+    "opt2": "Int",
+    "opt3": "Number",
+    "opt4": "Decimal",
+    "correct": "opt1"
+  },
+  {
+    "question": "What is the default value of a boolean variable in Java?",
+    "opt1": "true",
+    "opt2": "false",
+    "opt3": "0",
+    "opt4": "1",
+    "correct": "opt2"
+  },
+  {
+    "question": "Which method is called when an object is created in Java?",
+    "opt1": "init()",
+    "opt2": "start()",
+    "opt3": "constructor()",
+    "opt4": "new()",
+    "correct": "opt3"
+  },
+  {
+    "question": "What is the main method signature in Java?",
+    "opt1": "public static void main(String[] args)",
+    "opt2": "public void main(String args)",
+    "opt3": "static void main(String[] args)",
+    "opt4": "public static void main(String args[])",
+    "correct": "opt1"
+  },
+  {
+    "question": "Which keyword is used to prevent a method from being overridden?",
+    "opt1": "final",
+    "opt2": "static",
+    "opt3": "private",
+    "opt4": "protected",
+    "correct": "opt1"
+  },
+  {
+    "question": "What does the 'this' keyword refer to in Java?",
+    "opt1": "The current object",
+    "opt2": "The parent class",
+    "opt3": "The main method",
+    "opt4": "The static context",
+    "correct": "opt1"
+  },
+  {
+    "question": "What is the result of 5 + 2 * 3 in Java?",
+    "opt1": "11",
+    "opt2": "21",
+    "opt3": "17",
+    "opt4": "8",
+    "correct": "opt1"
+  }
+]

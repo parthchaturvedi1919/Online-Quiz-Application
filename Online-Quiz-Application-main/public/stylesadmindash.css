@@ -1,0 +1,406 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+
+* {
+  font-family: "Ubuntu", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --green: #50C878;
+  --light-green: #66bb6a;
+  --white: #fff;
+  --gray: #f5f5f5;
+  --black1: #222;
+  --black2: #999;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+  --transition-time: 0.4s;
+}
+
+body {
+  background-image: url('background.jpg');
+  background-size: cover;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+}
+
+.navigation {
+  position: fixed;
+  width: 250px;
+  height: 100%;
+  background: var(--green);
+  border-left: 10px solid var(--green);
+  transition: width var(--transition-time) ease;
+  overflow: hidden;
+  box-shadow: 0 4px 15px var(--shadow-color);
+  transform: translateX(0);
+  transition: transform var(--transition-time) ease;
+}
+
+.navigation.active {
+  width: 80px;
+  transform: translateX(-170px);
+}
+
+.navigation ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0;
+}
+
+.navigation ul li {
+  position: relative;
+  width: 100%;
+  list-style: none;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  margin-bottom: 15px;
+  transition: background-color var(--transition-time) ease, box-shadow var(--transition-time) ease;
+}
+
+.navigation ul li:hover,
+.navigation ul li.hovered {
+  background-color: var(--white);
+  box-shadow: 0 2px 10px var(--shadow-color);
+  animation: scaleUp 0.3s ease;
+}
+
+.navigation ul li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--white);
+  padding: 15px;
+  transition: color var(--transition-time) ease;
+}
+
+.navigation ul li:hover a,
+.navigation ul li.hovered a {
+  color: var(--green);
+}
+
+.navigation ul li a .icon {
+  font-size: 20px;
+  margin-right: 20px;
+  transition: margin-right var(--transition-time) ease;
+}
+
+.navigation.active ul li a .icon {
+  margin-right: 0;
+}
+
+.navigation ul li a .title {
+  font-size: 18px;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: opacity var(--transition-time) ease;
+}
+
+.navigation.active ul li a .title {
+  opacity: 0;
+}
+
+.main {
+  margin-left: 250px;
+  padding: 20px;
+  transition: margin-left var(--transition-time);
+}
+
+.main.active {
+  margin-left: 80px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background: var(--white);
+  border-bottom: 2px solid var(--gray);
+  box-shadow: 0 2px 10px var(--shadow-color);
+}
+
+.topbar .toggle {
+  font-size: 30px;
+  cursor: pointer;
+  transition: transform var(--transition-time);
+}
+
+.topbar .toggle:hover {
+  transform: rotate(90deg);
+}
+
+.topbar .search label {
+  position: relative;
+}
+
+.topbar .search label input {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid var(--gray);
+  border-radius: 30px;
+  outline: none;
+  transition: border-color var(--transition-time);
+}
+
+.topbar .search label input:focus {
+  border-color: var(--green);
+}
+
+.topbar .search label ion-icon {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: var(--gray);
+}
+
+.topbar .user img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform var(--transition-time);
+}
+
+.topbar .user img:hover {
+  transform: scale(1.1);
+}
+
+.cardBox {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+  gap: 20px;
+}
+
+.card {
+  background: var(--white);
+  width: 23%;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px var(--shadow-color);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background var(--transition-time), box-shadow var(--transition-time);
+}
+
+.card:hover {
+  background: var(--green);
+  color: var(--white);
+  box-shadow: 0 8px 20px var(--shadow-color);
+}
+
+.card .iconBx {
+  font-size: 30px;
+  transition: transform var(--transition-time);
+}
+
+.card:hover .iconBx {
+  transform: rotate(20deg);
+}
+
+.details {
+  display: flex;
+  gap: 30px;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
+
+.details .quizList {
+  background: var(--white);
+  width: 100%;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 5px 15px var(--shadow-color);
+}
+
+.details .quizList table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.details .quizList table th,
+.details .quizList table td {
+  padding: 12px;
+  text-align: left;
+}
+
+.details .quizList table th {
+  background: var(--green);
+  color: var(--white);
+  font-weight: 600;
+}
+
+.details .quizList table tbody tr:hover {
+  background: var(--gray);
+  transition: background var(--transition-time);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.cardHeader h2 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: var(--green);
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background var(--transition-time), transform var(--transition-time);
+}
+
+.btn:hover {
+  background: var(--light-green);
+  transform: scale(1.05);
+}
+
+.btn:active {
+  background: var(--green);
+}
+
+.userList {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 5px 15px var(--shadow-color);
+  width: 100%;
+}
+
+.userList .cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.userList .cardHeader h2 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.userList table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.userList table th,
+.userList table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--gray);
+}
+
+.userList table th {
+  background: var(--green);
+  color: var(--white);
+  font-weight: 600;
+}
+
+.userList table tbody tr:hover {
+  background: var(--gray);
+  transition: background var(--transition-time);
+}
+
+.details .quizList table,
+.userList table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px var(--shadow-color);
+}
+
+.details .quizList table thead,
+.userList table thead {
+  background: linear-gradient(45deg, var(--green), var(--light-green));
+  color: var(--white);
+}
+
+.details .quizList table th,
+.userList table th {
+  padding: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.details .quizList table td,
+.userList table td {
+  padding: 12px 15px;
+  text-align: center;
+  border-bottom: 1px solid var(--gray);
+  transition: background var(--transition-time);
+}
+
+.details .quizList table tbody tr:nth-child(even),
+.userList table tbody tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.details .quizList table tbody tr:hover,
+.userList table tbody tr:hover {
+  background: var(--light-green);
+  color: var(--white);
+}
+
+.details .quizList table tbody tr:hover td,
+.userList table tbody tr:hover td {
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  .cardBox {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .main {
+    margin-left: 0;
+  }
+
+  .navigation {
+    width: 100%;
+    position: relative;
+    height: auto;
+    border-left: none;
+  }
+
+  .navigation.active {
+    transform: none;
+    width: 100%;
+  }
+
+  .navigation ul li {
+    border-radius: 0;
+  }
+}

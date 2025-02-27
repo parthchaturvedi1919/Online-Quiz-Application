@@ -1,0 +1,30 @@
+[
+  {
+    "username": "Parth191919",
+    "email": "parthchaturvedi1919@gmail.com",
+    "password": "$2a$10$lL0NqCt92gx9lajXcpjFoO.ULlYGY4xdHFsHGYHR7EOeRtvOc.1x.",
+    "photo": "/imgs/1728591321581.png",
+    "isAdmin": false
+  },
+  {
+    "username": "Akshith2005",
+    "email": "akshithperakam@gmail.com",
+    "password": "$2a$10$IW0VLWadOYFsf7tK7edjLuFSngZXMPjSoy6nMDBrgL9ofeF.MoJ8y",
+    "photo": "/imgs/1728591018765.jpg",
+    "isAdmin": false
+  },
+  {
+    "username": "arjit0101",
+    "email": "arjitchaturvedi0101@gmail.com",
+    "password": "$2a$10$CBGd80SDPtb6N04kd9sQau7u836oI5VB8FD/bWvVk3jjM2QThQx2K",
+    "photo": "/imgs/1728591388541.jpg",
+    "isAdmin": false
+  },
+  {
+    "username": "Admin",
+    "email": "admin@gmail.com",
+    "password": "$2a$10$9n34z9nOwbRFJ28dUmz3se/ydja2NylcAnsjupedmOF5l7bxHuMCC",
+    "photo": "/imgs/1728501622011.webp",
+    "isAdmin": true
+  }
+]

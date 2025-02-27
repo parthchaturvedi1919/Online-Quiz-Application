@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Results</title>
+    <link rel="stylesheet" href="quizResultDetail.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navigation">
+            <ul>
+                <li>
+                    <a href="dashboard.html">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="settings.html">
+                        <span class="icon">
+                            <ion-icon name="settings-outline"></ion-icon>
+                        </span>
+                        <span class="title">Settings</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="quizResultDetail.html">
+                        <span class="icon">
+                            <ion-icon name="stats-chart-outline"></ion-icon>
+                        </span>
+                        <span class="title">Results</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/logout" id="logoutButton">
+                        <span class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                        </span>
+                        <span class="title">Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="main">
+            <header class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Search...">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+                <div class="user">
+                    <img id="userProfileImage" src="default-image.jpg" alt="User Profile">
+                    <span id="userName">Guest</span>
+                </div>
+            </header>
+
+            <main class="details">
+                <section class="quizList">
+                    <h2>Available Quizzes</h2>
+                    <ul id="quizList">
+                        <li>
+                            <span>Quiz 1</span>
+                            <button class="quiz-button">Take Quiz</button>
+                        </li>
+                        <li>
+                            <span>Quiz 2</span>
+                            <button class="quiz-button">Take Quiz</button>
+                        </li>
+                        <li>
+                            <span>Quiz 3</span>
+                            <button class="quiz-button">Take Quiz</button>
+                        </li>
+                        <li>
+                            <span>Quiz 4</span>
+                            <button class="quiz-button">Take Quiz</button>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="quizResults">
+                    <h2>Quiz Results</h2>
+                    <div id="resultContainer">
+                        <table class="result-table">
+                            <thead>
+                                <tr>
+                                    <th>Quiz Name</th>
+                                    <th>Score</th>
+                                    <th>Date Taken</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Results will be dynamically populated -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="quizResultDetail.js"></script>
+</body>
+
+</html>

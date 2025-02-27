@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Results</title>
+    <link rel="stylesheet" href="result.css">
+</head>
+
+<body>
+    <div class="result-container">
+        <div class="header">
+            <h1>Quiz Results</h1>
+            <a href="dashboard.html" class="btn">Back to Dashboard</a>
+        </div>
+        <div class="container">
+            <p class="heading-txt">Your Score</p>
+            <h1 id="score">Loading...</h1>
+        </div>
+        <div class="result-summary">
+            <h2>Summary</h2>
+            <div class="result-box">
+                <div class="result-item">
+                    <span class="label">Total Questions:</span>
+                    <span class="value" id="totalQuestions">Loading...</span>
+                </div>
+                <div class="result-item">
+                    <span class="label">Correct Answers:</span>
+                    <span class="value" id="correctAnswers">Loading...</span>
+                </div>
+                <div class="result-item">
+                    <span class="label">Score:</span>
+                    <span class="value" id="scorePercentage">Loading...</span>
+                </div>
+            </div>
+        </div>
+        <div class="correct-answers">
+            <h2>Correct Answers</h2>
+            <ul id="answersList">
+            </ul>
+        </div>
+    </div>
+
+    <script src="result.js"></script>
+</body>
+
+</html>

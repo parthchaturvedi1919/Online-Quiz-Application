@@ -1,0 +1,65 @@
+[
+  {
+    "quizName": "Quiz_one",
+    "user": "Parth191919",
+    "userScore": "7",
+    "totalQuestions": 7,
+    "correctAnswers": "7",
+    "scorePercentage": "100.00",
+    "date": "2024-10-09T09:50:46.911Z"
+  },
+  {
+    "quizName": "Quiz_three",
+    "user": "Parth191919",
+    "userScore": "10",
+    "totalQuestions": 10,
+    "correctAnswers": "10",
+    "scorePercentage": "100.00",
+    "date": "2024-10-09T19:22:24.266Z"
+  },
+  {
+    "quizName": "Quiz_three",
+    "user": "Admin",
+    "userScore": "1",
+    "totalQuestions": 10,
+    "correctAnswers": "1",
+    "scorePercentage": "10.00",
+    "date": "2024-10-09T19:27:11.693Z"
+  },
+  {
+    "quizName": "Quiz_three",
+    "user": "Admin",
+    "userScore": "0",
+    "totalQuestions": 10,
+    "correctAnswers": "0",
+    "scorePercentage": "0.00",
+    "date": "2024-10-09T19:27:44.972Z"
+  },
+  {
+    "quizName": "Quiz_one",
+    "user": "Parth191919",
+    "userScore": "7",
+    "totalQuestions": 7,
+    "correctAnswers": "7",
+    "scorePercentage": "100.00",
+    "date": "2024-10-09T19:39:24.407Z"
+  },
+  {
+    "quizName": "Quiz_one",
+    "user": "Akshith2005",
+    "userScore": "7",
+    "totalQuestions": 7,
+    "correctAnswers": "7",
+    "scorePercentage": "100.00",
+    "date": "2024-10-10T12:09:11.392Z"
+  },
+  {
+    "quizName": "Quiz_three",
+    "user": "Akshith2005",
+    "userScore": "10",
+    "totalQuestions": 10,
+    "correctAnswers": "10",
+    "scorePercentage": "100.00",
+    "date": "2024-10-10T12:09:49.751Z"
+  }
+]

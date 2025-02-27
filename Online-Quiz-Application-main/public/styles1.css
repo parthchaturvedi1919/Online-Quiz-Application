@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.header-content {
+    background: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    padding: 20px 10%;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    color: #fff;
+}
+
+.logo {
+    font-size: 32px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    filter: drop-shadow(0 0 5px #09001d);
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+    filter: drop-shadow(0 0 5px #09001d);
+}
+
+.navbar a:hover,
+.navbar {
+    color: #40d869;
+}
+
+.main {
+    min-height: 100vh;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    text-decoration: none;
+    position: absolute;
+    background-size: cover;
+    height: auto;
+    text-align: center;
+    background-color: transparent; 
+    color: #fff;
+    padding: 15px;
+    bottom: 0;
+    width: 100%;
+    filter: drop-shadow(0 0 5px #09001d);
+}
+
+#contact {
+    text-align: center;
+    background-size: cover;
+    color: #fff;
+    background-color: transparent;
+}
+
+#contact p,
+#contact h2,
+#contact a {
+    text-decoration: none;
+    display: inline;
+    margin-right: 25px;
+    color: #fff;
+}
+
+.home {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    filter: drop-shadow(0 0 5px #09001d);
+}
+
+.home-content {
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.home-content h1 {
+    font-size: 78px;
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.home-content p {
+    font-size: 16px;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px;
+}
+
+.home-content .Start-btn {
+    color: #fff;
+    width: 190px;
+    height: 55px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 0 10px seagreen;
+    transition: .5s;
+}
+
+.home-content .Start-btn:hover {
+    background: seagreen;
+    box-shadow: none;
+}

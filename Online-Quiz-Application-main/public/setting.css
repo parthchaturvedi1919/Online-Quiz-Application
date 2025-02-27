@@ -1,0 +1,325 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+
+* {
+  font-family: "Ubuntu", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --green: #50C878;
+  --light-green: #66bb6a;
+  --white: #fff;
+  --gray: #f5f5f5;
+  --black1: #222;
+  --black2: #999;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+  --transition-time: 0.4s;
+}
+
+body {
+  background-image: url('background.jpg');
+  background-size: cover;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: var(--gray);
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+}
+
+.navigation {
+  position: fixed;
+  width: 250px;
+  height: 100%;
+  background: var(--green);
+  border-left: 10px solid var(--green);
+  transition: width var(--transition-time) ease;
+  overflow: hidden;
+  box-shadow: 0 4px 15px var(--shadow-color);
+  transform: translateX(0);
+  transition: transform var(--transition-time) ease;
+}
+
+.navigation.active {
+  width: 80px;
+  transform: translateX(-170px);
+}
+
+.navigation ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0;
+}
+
+.navigation ul li {
+  position: relative;
+  width: 100%;
+  list-style: none;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  margin-bottom: 15px;
+  transition: background-color var(--transition-time) ease, box-shadow var(--transition-time) ease;
+}
+
+.navigation ul li:hover,
+.navigation ul li.hovered {
+  background-color: var(--white);
+  box-shadow: 0 2px 10px var(--shadow-color);
+  animation: scaleUp 0.3s ease;
+}
+
+.navigation ul li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--white);
+  padding: 15px;
+  transition: color var(--transition-time) ease;
+}
+
+.navigation ul li:hover a,
+.navigation ul li.hovered a {
+  color: var(--green);
+}
+
+.navigation ul li a .icon {
+  font-size: 20px;
+  margin-right: 20px;
+  transition: margin-right var(--transition-time) ease;
+}
+
+.navigation.active ul li a .icon {
+  margin-right: 0;
+}
+
+.navigation ul li a .title {
+  font-size: 18px;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: opacity var(--transition-time) ease;
+}
+
+.navigation.active ul li a .title {
+  opacity: 0;
+}
+
+.main {
+  margin-left: 250px;
+  padding: 20px;
+  transition: margin-left var(--transition-time);
+}
+
+.main.active {
+  margin-left: 80px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background: var(--white);
+  border-bottom: 2px solid var(--gray);
+  box-shadow: 0 2px 10px var(--shadow-color);
+}
+
+.topbar .toggle {
+  font-size: 30px;
+  cursor: pointer;
+  transition: transform var(--transition-time);
+}
+
+.topbar .toggle:hover {
+  transform: rotate(90deg);
+}
+
+.topbar .search label {
+  position: relative;
+}
+
+.topbar .search label input {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid var(--gray);
+  border-radius: 30px;
+  outline: none;
+  transition: border-color var(--transition-time);
+}
+
+.topbar .search label input:focus {
+  border-color: var(--green);
+}
+
+.topbar .search label ion-icon {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: var(--gray);
+}
+
+.topbar .user img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform var(--transition-time);
+}
+
+.topbar .user img:hover {
+  transform: scale(1.1);
+}
+
+.settings-options {
+  margin: 20px 0;
+}
+
+.settings-options ul {
+  list-style: none;
+  padding: 0;
+}
+
+.settings-options ul li {
+  margin-bottom: 10px;
+}
+
+.settings-options ul li a {
+  text-decoration: none;
+  color: var(--white);
+  font-size: 18px;
+  transition: color var(--transition-time);
+  display: flex;
+  align-items: center;
+}
+
+.settings-options ul li a:hover {
+  color: var(--light-green);
+}
+
+.settings-options ul li a .icon {
+  font-size: 22px;
+  margin-right: 10px;
+}
+
+.settings-content {
+  padding: 20px;
+  background: var(--white);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px var(--shadow-color);
+}
+
+.settings-section {
+  margin-bottom: 30px;
+}
+
+.settings-section h3 {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: var(--black1);
+}
+
+.settings-section form {
+  display: flex;
+  flex-direction: column;
+}
+
+.settings-section form label {
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: var(--black1);
+}
+
+.settings-section form input[type="password"],
+.settings-section form input[type="file"] {
+  padding: 10px;
+  border: 1px solid var(--gray);
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.settings-section form button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--green);
+  color: var(--white);
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color var(--transition-time);
+}
+
+.settings-section form button:hover {
+  background-color: var(--light-green);
+}
+
+.profile-photo img {
+  max-width: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.settings-section.hidden {
+  display: none;
+}
+
+.settings-section:not(.hidden) {
+  display: block;
+}
+
+#result-section {
+  padding: 20px;
+  background: var(--white);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px var(--shadow-color);
+}
+
+#result-section h3 {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: var(--black1);
+}
+
+#result-section p {
+  font-size: 16px;
+  color: var(--black2);
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#userName {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+@media (min-width: 768px) {
+  .user img {
+    width: 50px;
+    height: 50px;
+  }
+
+  #userName {
+    font-size: 18px;
+  }
+}

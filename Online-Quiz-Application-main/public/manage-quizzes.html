@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Quizzes</title>
+    <link rel="stylesheet" href="manage-quizzes.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li><a href="admin-dashboard.html"><span class="icon"><ion-icon name="home-outline"></ion-icon></span><span class="title">Dashboard</span></a></li>
+                <li><a href="manage-quizzes.html"><span class="icon"><ion-icon name="create-outline"></ion-icon></span><span class="title">Manage Quizzes</span></a></li>
+                <li><a href="admin-result.html"><span class="icon"><ion-icon name="stats-chart-outline"></ion-icon></span><span class="title">Results</span></a></li>
+                <li><a href="userlist.html"><span class="icon"><ion-icon name="person-outline"></ion-icon></span><span class="title">Users</span></a></li>
+                <li><a href="settings_admin.html"><span class="icon"><ion-icon name="settings-outline"></ion-icon></span><span class="title">Settings</span></a></li>
+                <li><a href="/logout" id="logoutButton"><span class="icon"><ion-icon name="log-out-outline"></ion-icon></span><span class="title">Logout</span></a></li>
+            </ul>
+        </div>
+
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Search...">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+                <div class="user">
+                    <img src="imgs/default-user.jpg" alt="User Profile" id="userProfileImage">
+                </div>
+            </div>
+
+            <div class="manage-quizzes">
+                <h2>Manage Quizzes</h2>
+                <div class="quiz-list">
+                    <button class="add-quiz" id="addQuizButton">Add New Quiz</button>
+                    <input type="file" id="file-input" accept=".json" style="margin-top: 10px;">
+
+                    <div id="quizModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close" id="closeModal">&times;</span>
+                            <h3>New Quiz Details</h3>
+                            <form id="quizForm">
+                                <label for="quiz-name">Quiz Name:</label>
+                                <input type="text" id="quiz-name" name="name" required><br><br>
+
+                                <label for="questions-count">Number of Questions:</label>
+                                <input type="number" id="questions-count" name="questions" min="1" required><br><br>
+
+                                <label for="file-path">File Path:</label>
+                                <input type="text" id="file-path" name="filePath" value="questions.json" required><br><br>
+
+                                <label for="users-count">Users Count:</label>
+                                <input type="number" id="users-count" name="usersCount" min="0" required><br><br>
+
+                                <label for="quiz-status">Status:</label>
+                                <select id="quiz-status" name="status">
+                                    <option value="Active">Active</option>
+                                    <option value="Inactive">Inactive</option>
+                                </select><br><br>
+
+                                <label for="quiz-url">Quiz Start URL:</label>
+                                <input type="text" id="quiz-url" name="url" value="First_page.html" required><br><br>
+
+                                <button type="submit" id="submitQuizButton">Submit</button>
+                                <button type="button" class="close" id="cancelQuizButton">Cancel</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Quiz Name</th>
+                                    <th>Date Added</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="quiz-table-body">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="manage-quizzes.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
